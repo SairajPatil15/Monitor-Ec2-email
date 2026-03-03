@@ -18,14 +18,8 @@
 
 
 - Amazon EC2
-
-
 - Amazon SNS
-
-
 - Amazon CloudWatch
-
-
 
 
 
@@ -34,17 +28,9 @@
 
 
 - Understand CloudWatch Metrics
-
-
 - Configure SNS Notifications
-
-
 - Automate EC2 actions
-
-
 - Monitor Infrastructure Health
-
-
 - Simulate CPU stress testing
 
 
@@ -62,32 +48,14 @@
 
 
 - Go to AWS Console → EC2
-
-
 - Click Launch Instance
-
-
 - Instance Name:
-
-
 - monitor_ec2
-
-
 - AMI: Ubuntu
-
-
 - Instance Type: t2.micro (Free tier eligible)
-
-
 - Create / Select Key Pair
-
-
 - Configure Security Group (Allow SSH - Port 22)
-
-
 - Launch Instance
-
-
 - After launch, copy the Instance ID.
 
 
@@ -97,44 +65,24 @@
 
 
 - Go to AWS Console → SNS
-
-
 - Create Topic
-
-
 - Name:
-
-
 - ec2_monitor
-
-
 - Type: Standard
 
-
-
-
+ 
 - Create Topic
-
-
 - Create Email Subscription
+- Open created topic
 
 
-Open created topic
+- Click Create Subscription
+- Protocol: Email
+- Endpoint: Your Email Address
+- Click Create Subscription
 
 
-Click Create Subscription
-
-
-Protocol: Email
-
-
-Endpoint: Your Email Address
-
-
-Click Create Subscription
-
-
-📩 Go to your email and click Confirm Subscription
+- 📩 Go to your email and click Confirm Subscription
 
 
 
@@ -142,7 +90,7 @@ Click Create Subscription
 ##  🔐 Change Access Policy 
 
 
-Edit Access Policy to allow CloudWatch to publish messages:
+- Edit Access Policy to allow CloudWatch to publish messages:
 
 
 
@@ -178,19 +126,19 @@ Example policy:
 Go to AWS Console → CloudWatch → Alarms → Create Alarm
 
 
-Select Metric
+- Select Metric
 
 
-Choose EC2
+- Choose EC2
 
 
-Select Per-Instance Metrics
+- Select Per-Instance Metrics
 
 
-Paste EC2 Instance ID
+- Paste EC2 Instance ID
 
 
-Select:
+- Select:
 
 
 CPUUtilization
@@ -198,16 +146,16 @@ CPUUtilization
 
 
 
-Specify Metric & Conditions
+- Specify Metric & Conditions
 
 
-Statistic: Average
+- Statistic: Average
 
 
-Period: 5 Minutes
+- Period: 5 Minutes
 
 
-Condition:
+- Condition:
 
 
 Greater than 20
@@ -215,7 +163,7 @@ Greater than 20
 
 
 
-Configure Actions
+- Configure Actions
 
 
 🔔 SNS Notification
@@ -238,7 +186,7 @@ Stop this instance
 
 
 
-Alarm Details
+- Alarm Details
 
 
 Alarm Name:
