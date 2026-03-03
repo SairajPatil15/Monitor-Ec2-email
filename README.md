@@ -14,16 +14,9 @@ This project demonstrates how to:
 
 
 
-
 🛡️ Services Used
-
-
 Amazon EC2
-
-
 Amazon SNS
-
-
 Amazon CloudWatch
 
 
