@@ -1,6 +1,13 @@
-🚀 EC2 Monitoring with CloudWatch & SNS (Auto Stop on High CPU)
+#🚀 EC2 Monitoring with CloudWatch & SNS (Auto Stop on High CPU) 
+
+
+
 
 **This project demonstrates how to:**
+
+
+
+
 Launch an Ubuntu EC2 instance
 Create an SNS Topic with Email Subscription
 Configure a CloudWatch Alarm
