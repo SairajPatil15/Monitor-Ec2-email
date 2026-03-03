@@ -2,7 +2,7 @@
 
 
 
-This project demonstrates how to:
+##  This project demonstrates how to:
 
 - Launch an Ubuntu EC2 instance  
 - Create an SNS Topic with Email Subscription  
@@ -14,101 +14,109 @@ This project demonstrates how to:
 
 
 
-🛡️ Services Used
-Amazon EC2
-Amazon SNS
-Amazon CloudWatch
+##  🛡️ Services Used
 
 
+- Amazon EC2
 
 
-🎯 Learning Outcome
+- Amazon SNS
 
 
-Understand CloudWatch Metrics
+- Amazon CloudWatch
 
 
-Configure SNS Notifications
 
 
-Automate EC2 actions
 
 
-Monitor Infrastructure Health
+##  🎯 Learning Outcome
 
 
-Simulate CPU stress testing
+- Understand CloudWatch Metrics
 
 
+- Configure SNS Notifications
 
 
-🏗️ Architecture Overview
+- Automate EC2 actions
 
 
-EC2 Instance → CloudWatch Alarm → SNS Email Notification → Auto Stop EC2
+- Monitor Infrastructure Health
 
 
+- Simulate CPU stress testing
 
 
-🖥️ Step 1: Create EC2 Instance
 
 
-Go to AWS Console → EC2
+##  🏗️ Architecture Overview
 
 
-Click Launch Instance
+ EC2 Instance → CloudWatch Alarm → SNS Email Notification → Auto Stop EC2
 
 
-Instance Name:
 
 
-monitor_ec2
+##  🖥️ Step 1: Create EC2 Instance
 
 
-AMI: Ubuntu
+- Go to AWS Console → EC2
 
 
-Instance Type: t2.micro (Free tier eligible)
+- Click Launch Instance
 
 
-Create / Select Key Pair
+- Instance Name:
 
 
-Configure Security Group (Allow SSH - Port 22)
+- monitor_ec2
 
 
-Launch Instance
+- AMI: Ubuntu
 
 
-After launch, copy the Instance ID.
+- Instance Type: t2.micro (Free tier eligible)
 
 
+- Create / Select Key Pair
 
 
-📢 Step 2: Create SNS Topic & Subscription
+- Configure Security Group (Allow SSH - Port 22)
 
 
-Go to AWS Console → SNS
+- Launch Instance
 
 
-Create Topic
+- After launch, copy the Instance ID.
 
 
-Name:
 
 
-ec2_monitor
+##  📢 Step 2: Create SNS Topic & Subscription
 
 
-Type: Standard
+- Go to AWS Console → SNS
 
 
+- Create Topic
 
 
-Create Topic
+- Name:
 
 
-Create Email Subscription
+- ec2_monitor
+
+
+- Type: Standard
+
+
+
+
+- Create Topic
+
+
+- Create Email Subscription
 
 
 Open created topic
@@ -131,7 +139,7 @@ Click Create Subscription
 
 
 
-🔐 Change Access Policy 
+##  🔐 Change Access Policy 
 
 
 Edit Access Policy to allow CloudWatch to publish messages:
@@ -164,7 +172,7 @@ Example policy:
 
 
 
-📊 Step 3: Create CloudWatch Alarm
+##  📊 Step 3: Create CloudWatch Alarm
 
 
 Go to AWS Console → CloudWatch → Alarms → Create Alarm
@@ -249,12 +257,12 @@ Create Alarm ✅
 
 
 
-🔗 Step 4: Connect to EC2
+##  🔗 Step 4: Connect to EC2
 
 
 
 
-🔥 Step 5: Increase CPU Utilization
+##  🔥 Step 5: Increase CPU Utilization
 
 
 ```  sudo stress --cpu 4 --timeout 600 ```
@@ -280,7 +288,7 @@ Automatically Stop EC2 Instance
 
 
 
-📬 Expected Output
+##  📬 Expected Output
 
 
 SNS Email received when CPU > 20%
@@ -294,8 +302,8 @@ Alarm state changes to In Alarm
 
 
 
-👨‍💻 Author
+##  👨‍💻 Author
 
 
-Sairaj Patil 
+##  Sairaj Patil 
 
