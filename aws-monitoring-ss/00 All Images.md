@@ -1,7 +1,7 @@
 # AWS Monitoring Project Screenshots
 
 ### Step 1 – EC2 Setup
-<img src="aws-monitoring-ss/01-ec2-create.png" width="400">
+<img src="aws-monitoring-ss/01-ec2-create.png">
 
 ### Step 2 – SNS Setup
 <img src="aws-monitoring-ss/02-sns-topic.png" width="400">
