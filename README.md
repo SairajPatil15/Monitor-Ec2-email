@@ -69,13 +69,9 @@
 - Name:
 - ec2_monitor
 - Type: Standard
-
- 
 - Create Topic
 - Create Email Subscription
 - Open created topic
-
-
 - Click Create Subscription
 - Protocol: Email
 - Endpoint: Your Email Address
@@ -127,17 +123,9 @@ Go to AWS Console → CloudWatch → Alarms → Create Alarm
 
 
 - Select Metric
-
-
 - Choose EC2
-
-
 - Select Per-Instance Metrics
-
-
 - Paste EC2 Instance ID
-
-
 - Select:
 
 
@@ -147,14 +135,8 @@ CPUUtilization
 
 
 - Specify Metric & Conditions
-
-
 - Statistic: Average
-
-
 - Period: 5 Minutes
-
-
 - Condition:
 
 
@@ -192,7 +174,8 @@ Stop this instance
 Alarm Name:
 
 
-EC2_CPU_Utilization_Alarm
+- EC2_CPU_Utilization_Alarm
+
 
 
 Description:
@@ -219,19 +202,11 @@ Create Alarm ✅
 This will:
 
 
-Use 4 CPU workers
-
-
-Run for 600 seconds (10 minutes)
-
-
-Trigger CloudWatch Alarm
-
-
-Send Email Notification
-
-
-Automatically Stop EC2 Instance
+- Use 4 CPU workers
+- Run for 600 seconds (10 minutes)
+- Trigger CloudWatch Alarm
+- Send Email Notification
+- Automatically Stop EC2 Instance
 
 
 
@@ -239,13 +214,9 @@ Automatically Stop EC2 Instance
 ##  📬 Expected Output
 
 
-SNS Email received when CPU > 20%
-
-
-EC2 Instance state changes to Stopped
-
-
-Alarm state changes to In Alarm
+- SNS Email received when CPU > 20%
+- EC2 Instance state changes to Stopped
+- Alarm state changes to In Alarm
 
 
 
